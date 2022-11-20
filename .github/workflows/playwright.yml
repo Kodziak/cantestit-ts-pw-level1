@@ -1,11 +1,13 @@
 name: Playwright Tests
+
 on:
   push:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+
 jobs:
-  test:
+  e2e-test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
@@ -13,6 +15,7 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 16
+        
     - name: Install dependencies
       run: yarn install --force
 

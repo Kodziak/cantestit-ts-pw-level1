@@ -103,10 +103,10 @@ const config: PlaywrightTestConfig = {
   outputDir: './e2e/test-results/',
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run dev',
-  //   port: 3000,
-  // },
+  webServer: {
+    command: 'yarn dev',
+    port: 3000,
+  },
 };
 
 export default config;
